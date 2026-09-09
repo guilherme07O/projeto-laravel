@@ -19,7 +19,7 @@ Route::get('/', function () {
         ]);
 });
 
-Route::get('contact/', function () {
+Route::get('contato', function () {
     return view('contact');
 });
 
