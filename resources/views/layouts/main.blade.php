@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,9 +24,28 @@
 </html>
 
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="collapse navbar-collapse" id="navbar">
+                <a href="/" class="navbar-brand"></a>
+                    <img src="/img/cavalo.jpg" alt="HDC Events">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Criar Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Entrar e Cadastrar</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <!-- diretiva para adicionar conteúdos dinamicamente-->
-@yield('content')
-<footer>
-    <p>HDC events &copy; 2026 </p>
-</footer>
+    @yield('content')
+    <footer>
+        <p>HDC events &copy; 2026 </p>
+    </footer>
 </body>
