@@ -2,7 +2,7 @@
 
 @section('title', 'contact')
 
-@section('contect')
+@section('content')
 
 @endsection
 
