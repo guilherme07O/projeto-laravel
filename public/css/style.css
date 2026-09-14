@@ -1,7 +1,151 @@
+/*General */
+
 * {
     font-family: 'Roboto';
 }
 
+body{
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+header{
+    background-color: #FFF;
+    border-bottom: solid #CCC;
+}
+
+h2{
+    padding-top: 50px;
+    margin-left: 50px;
+}
+
+.subtitle{
+    margin-left: 50px;
+}
+
+.row{
+    margin: 0;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+.btn-primary{
+    border:solid #01329c;
+}
+
+.btn-primary:hover{
+    background-color: #090371;
+    border-color: #2800c8;
+}
+
+/* navbar */
 #navbar img {
     width: 50px;
+    margin-left: 30px;
+}
+
+#navbar{
+    justify-content: space-between;
+    background-color: #FFF;
+    padding: 5px 0;
+}
+
+#navbar a{
+    font-size: 14px;
+    color: #757575;
+}
+
+#navbar a:hover{
+    color: #0018d2;
+}
+
+/* search container */
+
+#search-container{
+    background-image: url("../img/banner3.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    padding: 50px;
+    text-align: center;
+}
+
+#search-container h1{
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+#search-container form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* Events list */
+#events-container{
+    padding: 5px;
+}
+
+#events-container h2{
+    margin-bottom: 10px;
+}
+
+#events-container .subtitle{
+    color: #757575;
+    margin-bottom: 30px;
+}
+
+#cards-container {
+    display: flex;
+}
+
+#events-container .card{
+    flex: 1 1 0;
+    max-width: 25%;
+    border-radius: 10px;
+    padding: 0;
+    margin: 5px;
+    margin-left: 50px;
+}
+
+#events-container img{
+    max-height: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card .card-date {
+    font-size: 20px;
+    color: #232323;
+}
+
+.card .card-title {
+    color: #212121;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.card-participantes{
+    font-size: 20px;
+    color: #232323;
+}
+
+/* footer */
+
+footer{
+    text-align: center;
+    background-color: #000000;
+    color: #FFF;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p{
+    margin-bottom: 0;
 }
