@@ -32,6 +32,11 @@ class EventController extends Controller
         $event->save(); // salva tudo isso no banco de dados
 
 
-        return redirect('/')->with('msg', 'Evento criado com sucesso'); //redireciona o usuário para a view home
+        return redirect('/')->with([
+            'msg'=>[
+                'text'=>'Evento criado com sucesso',
+                'color'=>'danger'
+            ]
+        ]); //redireciona o usuário para a view home
     }
 }
