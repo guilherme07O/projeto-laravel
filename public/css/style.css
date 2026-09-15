@@ -41,6 +41,16 @@ h2{
     border-color: #2800c8;
 }
 
+.msg{
+background-color: #d4edda;
+color: #155724;
+border: 1px solid #00b32a;
+width: 100%;
+margin-bottom:0 ;
+text-align: center;
+padding: 10px;
+}
+
 /* navbar */
 #navbar img {
     width: 50px;

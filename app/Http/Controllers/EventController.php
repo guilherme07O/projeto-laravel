@@ -28,8 +28,10 @@ class EventController extends Controller
         $event->private = $request->private;
         $event->description = $request->description;
 
+
         $event->save(); // salva tudo isso no banco de dados
 
-        return redirect('/'); //redireciona o usuário para a view home
+
+        return redirect('/')->with('msg', 'Evento criado com sucesso'); //redireciona o usuário para a view home
     }
 }
