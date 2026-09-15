@@ -30,16 +30,21 @@
                 <a href="/" class="navbar-brand"><img src="/img/logo.jpg" alt="HDC Events"></a>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="/" class="nav-link fs-5 {{request()->is('/') ? 'fw-bold text-primary ': ''}}">Eventos</a>
+                        <a href="/"
+                            class="nav-link fs-5 {{ request()->is('/') ? 'fw-bold text-primary ' : '' }}">Eventos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/events/create" class="nav-link fs-5 {{request()->is('events/create') ? 'fw-bold text-primary ': ''}}">Criar Eventos</a>
+                        <a href="/events/create"
+                            class="nav-link fs-5 {{ request()->is('events/create') ? 'fw-bold text-primary ' : '' }}">Criar
+                            Eventos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/products/create" class="nav-link fs-5 {{request()->is('products/create') ? 'fw-bold text-primary ': ''}}">Produtos</a>
+                        <a href="/products/create"
+                            class="nav-link fs-5 {{ request()->is('products/create') ? 'fw-bold text-primary ' : '' }}">Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/contact/create" class="nav-link fs-5 {{request()->is('contact/create') ? 'fw-bold text-primary ': ''}}">Contato</a>
+                        <a href="/contact/create"
+                            class="nav-link fs-5 {{ request()->is('contact/create') ? 'fw-bold text-primary ' : '' }}">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -49,9 +54,14 @@
     <main>
         <div class="container-fluid">
             <div class="row">
-                @if (session('msg'))
-                    <p class="msg">{{session('msg') }}</p>
-                @endif
+                <div class="d-flex justify-content-center align-items-center">
+                    @if (session('msg'))
+                        <div class="col-6 alert alert-{{session('msg')['color']}} mt-2 alert-dismissible fade show" role="alert">
+                            <strong>{{session('msg')['text']}}</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
+                </div>
                 @yield('content')
             </div>
         </div>
