@@ -30,16 +30,16 @@
                 <a href="/" class="navbar-brand"><img src="/img/logo.jpg" alt="HDC Events"></a>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="/" class="nav-link">Eventos</a>
+                        <a href="/" class="nav-link fs-5 {{request()->is('/') ? 'fw-bold text-primary ': ''}}">Eventos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/events/create" class="nav-link">Criar Eventos</a>
+                        <a href="/events/create" class="nav-link fs-5 {{request()->is('events/create') ? 'fw-bold text-primary ': ''}}">Criar Eventos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/products/create" class="nav-link">Produtos</a>
+                        <a href="/products/create" class="nav-link fs-5 {{request()->is('products/create') ? 'fw-bold text-primary ': ''}}">Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/contact/create" class="nav-link">Contato</a>
+                        <a href="/contact/create" class="nav-link fs-5 {{request()->is('contact/create') ? 'fw-bold text-primary ': ''}}">Contato</a>
                     </li>
                 </ul>
             </div>
