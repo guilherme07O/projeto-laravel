@@ -28,6 +28,16 @@ class EventController extends Controller
         $event->private = $request->private;
         $event->description = $request->description;
 
+        //image upload
+        if ($request->hasfile('image') && $request->file('image')->isValid()){
+
+            $requestImage = $request->image;
+            $extension = $requestImage->extension();
+            $imageName = md5($requestImage->getClientoriginalName() . strtotime('now')) . "." . $extension;
+            $request->image->move(public_path('img/events'), $imageName);
+            $event->image = $imageName;
+        }
+
 
         $event->save(); // salva tudo isso no banco de dados
 
@@ -35,7 +45,7 @@ class EventController extends Controller
         return redirect('/')->with([
             'msg'=>[
                 'text'=>'Evento criado com sucesso',
-                'color'=>'danger'
+                'color'=>'success'
             ]
         ]); //redireciona o usuário para a view home
     }
